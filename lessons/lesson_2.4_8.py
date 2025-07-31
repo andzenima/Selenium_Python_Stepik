@@ -25,4 +25,3 @@ with webdriver.Chrome() as driver:
 
     aLRT = driver.switch_to.alert
     print(aLRT.text[(aLRT.text.index(': ')) + 2:])
-
