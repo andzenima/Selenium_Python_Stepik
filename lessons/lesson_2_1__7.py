@@ -1,19 +1,17 @@
-# lesson_2.1_5
+# lesson_2_1__7
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import math
 import time
 
-link = "https://suninjuly.github.io/math.html"
-
 with webdriver.Chrome() as driver:
-    driver.get("https://suninjuly.github.io/math.html")
+    driver.get("http://suninjuly.github.io/get_attribute.html")
 
-    x = int(driver.find_element(By.CSS_SELECTOR, "#input_value").text)
+    chst_n = int(driver.find_element(By.CSS_SELECTOR, "#treasure").get_attribute("valuex"))
 
     ans = driver.find_element(By.CSS_SELECTOR, "#answer")
-    ans.send_keys(str(math.log(abs(12*math.sin(int(x))))))
+    ans.send_keys(str(math.log(abs(12 * math.sin(chst_n)))))
 
     driver.find_element(By.CSS_SELECTOR, "#robotCheckbox").click()
     driver.find_element(By.CSS_SELECTOR, "#robotsRule").click()

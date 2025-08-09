@@ -1,4 +1,4 @@
-# lesson_1.6_11
+# lesson_1_6__11
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
